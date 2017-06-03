@@ -72,21 +72,7 @@ ${color DimGray}$font${top_mem name 2}${alignr}${top mem 2} %
 $font${top_mem name 3}${alignr}${top mem 3} %
 $font${top_mem name 4}${alignr}${top mem 4} %
 $font${top_mem name 5}${alignr}${top mem 5} %
-#Network Section
-${font Arial:bold:size=12}${color Tan2}NETWORK ${color DarkSlateGray}${hr 2}
-$font${color DimGray}IP on enp9s0 $alignr ${addr enp9s0}
-$font${color DimGray}External IP $alignr ${exec curl -s www.icanhazip.com}
-$font${color DimGray}Country $alignr ${exec curl -s http://whatismycountry.com/ |
-  sed -n 's|.*,\(.*\)</h3>|\1|p'}
- 
-Down $alignr ${downspeed enp9s0} kb/s
-#Graph DOWN
-Downloaded: $alignr  ${totaldown enp9s0}
-${color DimGray}${downspeedgraph enp9s0 32,150 000000 7f8ed3}
-#Graph UP
-Up $alignr ${upspeed enp9s0} kb/s
-Uploaded: $alignr  ${totalup enp9s0}
-${color Tan2}${upspeedgraph enp9s0 32,150 000000 7f8ed3}
+
 #TIME SETTINGS
 ${font Arial:bold:size=12}${color Tan1}TIME ${color DarkSlateGray}${hr 2}
  
