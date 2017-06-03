@@ -45,11 +45,11 @@ xftfont Samanata:size=10
 TEXT
 #Network Section
 ${font Arial:bold:size=12}${color #F8BE03}NETWORK ${color #00ACEA}${hr 2}
-${font}${color DimGray}Down $alignr ${downspeed enp9s0} kb/s
+${font}${color DimGray}Downstream $alignr ${downspeed enp9s0} kb/s
 #Graph DOWN
 Downloaded: $alignr  ${totaldown enp9s0}
-${color DimGray}${downspeedgraph enp9s0 32,150 000000 7f8ed3}
+${color DimGray}${downspeedgraph enp9s0 32,250 000000 7f8ed3}
 #Graph UP
-Up $alignr ${upspeed enp9s0} kb/s
+Upstream $alignr ${upspeed enp9s0} kb/s
 Uploaded: $alignr  ${totalup enp9s0}
-${color Tan2}${upspeedgraph enp9s0 32,150 000000 7f8ed3}
+${color Tan2}${upspeedgraph enp9s0 32,250 000000 7f8ed3}
