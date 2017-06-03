@@ -6,17 +6,17 @@ xftfont 123:size=8
 xftalpha 0.1
 
 #Update Interval
-update_interval 1
+update_interval 0.5
 
 total_run_times 0
 own_window yes
 own_window_type normal
 own_window_colour black
 #Transparent Background Option - Yes or No
-own_window_transparent no
+own_window_transparent yes
 #Transparent amount options
 own_window_argb_visual yes
-own_window_argb_value 90
+own_window_argb_value 100
 #End of Transparent Settings
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
@@ -32,7 +32,7 @@ default_outline_color green
 #Screen Alignment
 alignment top_left
 gap_x 20
-gap_y 180
+gap_y 300
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
@@ -45,12 +45,7 @@ xftfont Samanata:size=10
 TEXT
 #Network Section
 ${font Arial:bold:size=12}${color Tan2}NETWORK ${color DarkSlateGray}${hr 2}
-#$font${color DimGray}IP on enp9s0 $alignr ${addr enp9s0}
-#$font${color DimGray}External IP $alignr ${exec curl -s www.icanhazip.com}
-#$font${color DimGray}Country $alignr ${exec curl -s http://whatismycountry.com/ |
-  sed -n 's|.*,\(.*\)</h3>|\1|p'}
- 
-Down $alignr ${downspeed enp9s0} kb/s
+${font}${color DimGray}Down $alignr ${downspeed enp9s0} kb/s
 #Graph DOWN
 Downloaded: $alignr  ${totaldown enp9s0}
 ${color DimGray}${downspeedgraph enp9s0 32,150 000000 7f8ed3}
