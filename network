@@ -30,9 +30,9 @@ default_color gray
 default_shade_color red
 default_outline_color green
 #Screen Alignment
-alignment top_right
+alignment top_left
 gap_x 20
-gap_y 60
+gap_y 180
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
@@ -45,9 +45,9 @@ xftfont Samanata:size=10
 TEXT
 #Network Section
 ${font Arial:bold:size=12}${color Tan2}NETWORK ${color DarkSlateGray}${hr 2}
-$font${color DimGray}IP on enp9s0 $alignr ${addr enp9s0}
-$font${color DimGray}External IP $alignr ${exec curl -s www.icanhazip.com}
-$font${color DimGray}Country $alignr ${exec curl -s http://whatismycountry.com/ |
+#$font${color DimGray}IP on enp9s0 $alignr ${addr enp9s0}
+#$font${color DimGray}External IP $alignr ${exec curl -s www.icanhazip.com}
+#$font${color DimGray}Country $alignr ${exec curl -s http://whatismycountry.com/ |
   sed -n 's|.*,\(.*\)</h3>|\1|p'}
  
 Down $alignr ${downspeed enp9s0} kb/s
