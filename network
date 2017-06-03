@@ -44,7 +44,7 @@ xftfont Samanata:size=10
 #Settings Below TEXT are shown on the screen
 TEXT
 #Network Section
-${font Arial:bold:size=12}${color Tan2}NETWORK ${color DarkSlateGray}${hr 2}
+${font Arial:bold:size=12}${color #F8BE03}NETWORK ${color #00ACEA}${hr 2}
 ${font}${color DimGray}Down $alignr ${downspeed enp9s0} kb/s
 #Graph DOWN
 Downloaded: $alignr  ${totaldown enp9s0}
