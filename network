@@ -6,7 +6,7 @@ xftfont 123:size=8
 xftalpha 0.1
 
 #Update Interval
-update_interval 0.5
+update_interval 1
 
 total_run_times 0
 own_window yes
