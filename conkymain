@@ -4,8 +4,10 @@ background yes
 use_xft yes
 xftfont 123:size=8
 xftalpha 0.1
+
 #Update Interval
 update_interval 2.5
+
 total_run_times 0
 own_window yes
 own_window_type normal
@@ -28,7 +30,7 @@ default_color gray
 default_shade_color red
 default_outline_color green
 #Screen Alignment
-alignment top_right
+alignment top_left
 gap_x 20
 gap_y 60
 no_buffers yes
