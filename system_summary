@@ -56,7 +56,6 @@ ${font Arial:bold:size=12}${color #F8BE03}SYSTEM ${color #00ACEA}${hr 2}
 $font${color DimGray}$sysname $kernel $alignr $machine
 Uptime $alignr${uptime}
 File System $alignr${fs_type}
-CPU  $alignr${freq_g cpu0}Ghz
 
 $font${color DimGray}IP on enp9s0 $alignr ${addr enp9s0}
 $font${color DimGray}External IP $alignr ${exec curl -s www.icanhazip.com}
