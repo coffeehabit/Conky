@@ -55,9 +55,19 @@ ${font openlogos:size=20}${font Arial:size=20}${color Ivory}$alignc RAVEN${font 
 ${font Arial:bold:size=12}${color #F8BE03}SYSTEM ${color #00ACEA}${hr 2}
 $font${color DimGray}$sysname $kernel $alignr $machine
 Uptime $alignr${uptime}
-File System $alignr${fs_type}
 
 $font${color DimGray}IP on enp9s0 $alignr ${addr enp9s0}
 $font${color DimGray}External IP $alignr ${exec curl -s www.icanhazip.com}
 $font${color DimGray}Country $alignr ${exec curl -s http://whatismycountry.com/ |
   sed -n 's|.*,\(.*\)</h3>|\1|p'}
+
+${font Arial:bold:size=12}${color #F8BE03}MEMORY ${color #00ACEA}${hr 2}
+$font${color DimGray}MEM $alignc $mem / $memmax $alignr $memperc%
+$membar
+$font${color DimGray}SWAP $alignc $swap / $swapmax $alignr $swapperc%
+$swapbar
+#SSD Section
+${font Arial:bold:size=12}${color #F8BE03}SSD & USB ${color #00ACEA}${hr 2}
+$font${color DimGray} File System $alignr${fs_type}
+$font${color DimGray} home: ${fs_used /home} / ${fs_size /home} ${alignr} ${fs_used_perc /home}%
+#$font${color DimGray}${voffset -12}${execpi 5 ~/.conky/usb_nowe.sh}
