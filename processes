@@ -6,7 +6,7 @@ xftfont 123:size=8
 xftalpha 0.1
 
 #Update Interval
-update_interval 2.5
+update_interval 10
 
 total_run_times 0
 own_window yes
@@ -32,7 +32,7 @@ default_outline_color green
 #Screen Alignment
 alignment top_left
 gap_x 20
-gap_y 120
+gap_y 350
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
@@ -43,41 +43,17 @@ xftfont Samanata:size=10
  
 #Settings Below TEXT are shown on the screen
 TEXT
-#Top Title Section
-${font openlogos:size=20}${font Arial:size=20}${color Ivory}RAVEN${font openlogos:size=20}
-#System Section
-${voffset -75}
-${color DimGray}
-${font}
-${font Arial:bold:size=12}${color Tan1}SYSTEM ${color DarkSlateGray} ${hr 2}
-$font${color DimGray}$sysname $kernel $alignr $machine
-CPU  $alignr${freq_g cpu0}Ghz
-Uptime $alignr${uptime}
-File System $alignr${fs_type}
 #CPU Section
 ${font Arial:bold:size=12}${color Tan1}PROCESSORS ${color DarkSlateGray}${hr 2}
+i7 6700K  $alignr${freq_g cpu0}Ghz
 $font${color DimGray}CPU1  ${cpu cpu1}% ${cpubar cpu1}
 CPU2  ${cpu cpu2}% ${cpubar cpu2}
- 
-${font Arial:bold:size=12}${color Tan1}MEMORY ${color DarkSlateGray}${hr 2}
-$font${color DimGray}MEM $alignc $mem / $memmax $alignr $memperc%
-$membar
-$font${color DimGray}SWAP $alignc $swap / $swapmax $alignr $swapperc%
-$swapbar
-#SSD Section
-${font Arial:bold:size=12}${color Tan1}SSD & USB ${color DarkSlateGray}${hr 2}
-$font${color DimGray} home: ${fs_used /home} / ${fs_size /home} ${alignr} ${fs_used_perc /home}%
-#$font${color DimGray}${voffset -12}${execpi 5 ~/.conky/usb_nowe.sh}
+CPU3  ${cpu cpu3}% ${cpubar cpu3}
+CPU4  ${cpu cpu4}% ${cpubar cpu4}
+
 #Processes Section
 ${font Arial:bold:size=12}${color Tan1}TOP PROCESSES ${color DarkSlateGray}${hr 2}
 ${color DimGray}$font${top_mem name 2}${alignr}${top mem 2} %
 $font${top_mem name 3}${alignr}${top mem 3} %
 $font${top_mem name 4}${alignr}${top mem 4} %
 $font${top_mem name 5}${alignr}${top mem 5} %
-
-#TIME SETTINGS
-${font Arial:bold:size=12}${color Tan1}TIME ${color DarkSlateGray}${hr 2}
- 
-${color Tan2} ${font :bold:size=8}$alignc${time %A}
-${color Tan2} ${font :size=30}$alignc${time %I:%M %P}
-${voffset -20}${font :bold:size=10}$alignc${time %d %b. %Y}
