@@ -32,7 +32,7 @@ default_outline_color green
 #Screen Alignment
 alignment top_left
 gap_x 20
-gap_y 300
+gap_y 350
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
