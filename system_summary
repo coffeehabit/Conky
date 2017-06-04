@@ -45,10 +45,10 @@ xftfont Samanata:size=10
 TEXT
 #System Section
 #${voffset -75}
-${color Tan2} ${font :bold:size=8}$alignc${time %A}
-${color Tan2} ${font :size=30}$alignc${time %I:%M %P}
+${color #F8BE03} ${font :bold:size=8}$alignc${time %A}
+${color #F8BE03} ${font :size=30}$alignc${time %I:%M %P}
 ${voffset -20}${font :bold:size=10}$alignc${time %d %b. %Y}
-${font Arial:bold:size=12}${color Tan1}SYSTEM ${color DarkSlateGray} ${hr 2}
+${font Arial:bold:size=12}${color #F8BE03}SYSTEM ${color #00ACEA}${hr 2}
 $font${color DimGray}$sysname $kernel $alignr $machine
 Uptime $alignr${uptime}
 File System $alignr${fs_type}
