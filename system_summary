@@ -43,11 +43,15 @@ xftfont Samanata:size=10
  
 #Settings Below TEXT are shown on the screen
 TEXT
-#System Section
+#Time Section
 #${voffset -75}
 ${color #F8BE03} ${font :bold:size=8}$alignc${time %A}
 ${color #F8BE03} ${font :size=30}$alignc${time %I:%M %P}
 ${voffset -20}${font :bold:size=10}$alignc${time %d %b. %Y}
+
+#Title Section
+${font openlogos:size=20}${font Arial:size=20}${color Ivory}$alignc RAVEN${font openlogos:size=20}
+#System Section
 ${font Arial:bold:size=12}${color #F8BE03}SYSTEM ${color #00ACEA}${hr 2}
 $font${color DimGray}$sysname $kernel $alignr $machine
 Uptime $alignr${uptime}
