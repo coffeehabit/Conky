@@ -6,7 +6,7 @@ xftfont 123:size=8
 xftalpha 0.1
 
 #Update Interval
-update_interval 5
+update_interval 15
 
 total_run_times 0
 own_window yes
@@ -66,8 +66,9 @@ $font${color DimGray}MEM $alignc $mem / $memmax $alignr $memperc%
 $membar
 $font${color DimGray}SWAP $alignc $swap / $swapmax $alignr $swapperc%
 $swapbar
+
 #SSD Section
-${font Arial:bold:size=12}${color #F8BE03}SSD & USB ${color #00ACEA}${hr 2}
+${font Arial:bold:size=12}${color #F8BE03}SSD & USB
 $font${color DimGray} File System $alignr${fs_type}
 $font${color DimGray} home: ${fs_used /home} / ${fs_size /home} ${alignr} ${fs_used_perc /home}%
 #$font${color DimGray}${voffset -12}${execpi 5 ~/.conky/usb_nowe.sh}
