@@ -6,17 +6,17 @@ xftfont 123:size=8
 xftalpha 0.1
 
 #Update Interval
-update_interval 10
+update_interval 1
 
 total_run_times 0
 own_window yes
 own_window_type normal
 own_window_colour black
 #Transparent Background Option - Yes or No
-own_window_transparent no
+own_window_transparent yes
 #Transparent amount options
 own_window_argb_visual yes
-own_window_argb_value 90
+own_window_argb_value 100
 #End of Transparent Settings
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
@@ -32,7 +32,7 @@ default_outline_color green
 #Screen Alignment
 alignment top_left
 gap_x 20
-gap_y 350
+gap_y 450
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
@@ -44,16 +44,30 @@ xftfont Samanata:size=10
 #Settings Below TEXT are shown on the screen
 TEXT
 #CPU Section
-${font Arial:bold:size=12}${color Tan1}PROCESSORS ${color DarkSlateGray}${hr 2}
-i7 6700K  $alignr${freq_g cpu0}Ghz
-$font${color DimGray}CPU1  ${cpu cpu1}% ${cpubar cpu1}
-CPU2  ${cpu cpu2}% ${cpubar cpu2}
-CPU3  ${cpu cpu3}% ${cpubar cpu3}
-CPU4  ${cpu cpu4}% ${cpubar cpu4}
+
+${font Arial:bold:size=12}${color #F8BE03}PROCESSORS ${color #00ACEA}${hr 2}
+$font${color DimGray}i7 6700K frequency $alignr${freq_g cpu0}Ghz
+Cores
+        1  ${cpu cpu1}% ${cpubar cpu1}
+        2  ${cpu cpu2}% ${cpubar cpu2}
+        3  ${cpu cpu3}% ${cpubar cpu3}
+        4  ${cpu cpu4}% ${cpubar cpu4}
 
 #Processes Section
-${font Arial:bold:size=12}${color Tan1}TOP PROCESSES ${color DarkSlateGray}${hr 2}
+${font Arial:bold:size=12}${color #F8BE03}TOP PROCESSES
 ${color DimGray}$font${top_mem name 2}${alignr}${top mem 2} %
 $font${top_mem name 3}${alignr}${top mem 3} %
 $font${top_mem name 4}${alignr}${top mem 4} %
 $font${top_mem name 5}${alignr}${top mem 5} %
+
+
+#Network Section
+${font Arial:bold:size=12}${color #F8BE03}NETWORK ${color #00ACEA}${hr 2}
+${font}${color DimGray}Downstream $alignr ${downspeed enp9s0} kb/s
+#Graph DOWN
+Downloaded: $alignr  ${totaldown enp9s0}
+${color DimGray}${downspeedgraph enp9s0 32,250 000000 7f8ed3}
+#Graph UP
+Upstream $alignr ${upspeed enp9s0} kb/s
+Uploaded: $alignr  ${totalup enp9s0}
+${color Tan2}${upspeedgraph enp9s0 32,250 000000 7f8ed3}
